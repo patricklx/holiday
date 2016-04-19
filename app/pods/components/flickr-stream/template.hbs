@@ -1,0 +1,8 @@
+
+<div class="flickr row">
+  {{#each stream as |flickr|}}
+  <div class="flickr-col col-sm-6 col-md-3">
+    {{flickr-photo flickr=flickr addTag=(action 'addTag')}}
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,14 @@
+<div class="flickr thumbnail">
+    {{lazy-image url=flickr.media.m}}
+    <div class="caption">
+        <h3>
+            <a href="{{flickr.link}}">{{flickr.title}}</a>
+            <small>by <a href="https://www.flickr.com/photos/{{flickr.authorid}}/">{{flickr.author}}</a>
+            </small>
+        </h3>
+        <p>{{{flickr.description}}}</p>
+        <p>Tags: {{#each tags as |tag|}}
+          <a href="#" class="flickr-add-tag" {{action "addTag" tag}}>{{tag}}</a>
+          {{/each}}</p>
+    </div>
+</div>

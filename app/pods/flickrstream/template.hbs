@@ -1,0 +1,26 @@
+
+<span>users:</span>
+{{#power-select-with-create
+      allowClear=true
+      multiple=true
+      options=users
+      selected=selectedUser
+      onchange=(action "changedUser")
+      oncreate=(action "createUser")
+      as |user term|}}
+  {{user}}
+{{/power-select-with-create}}
+
+<span>tags:</span>
+{{#power-select-with-create
+      allowClear=true
+      multiple=true
+      options=tagOptions
+      selected=selectedTag
+      onchange=(action "changedTag")
+      oncreate=(action "createTag")
+      as |tag term|}}
+  {{tag}}
+{{/power-select-with-create}}
+
+{{flickr-stream stream=currentFeed.items more=(action "more") addTag=(action "addTag")}}
